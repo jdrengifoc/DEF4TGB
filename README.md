@@ -35,3 +35,36 @@ You can run Python scripts inside the Poetry environment without entering the sh
 ```bash
 poetry run python -m src.main
 ```
+
+## 🛠️ Development Plan
+
+### Interfaz
+1. **API o clase de Python** que sirva como interfaz para operaciones comunes y que los códigos de trading se conecten vía dicha interfaz.
+   - Conexión/Desconexión
+   - Definir modo (demo/real)
+   - Controles
+   - Quotas: definir los límites tanto del broker como nuestros
+   - Apagar TP y SL en rollovers
+   - Obtener datos
+   - Abrir y cerrar operación con TP y SL
+   - Actualizar TP y SL
+   - Información activo: rollover, swap, margin, margin_level, comisión, contract_value, pip, horario, spread
+
+2. **Ciclo de vida de los datos**
+   - Descargar los datos iniciales (ancho_de_ventana y temporalidad)
+   - Actualizar los datos (frecuencia y temporalidad)
+   - Limpieza
+
+3. **Modelo**
+   - Inputs: datos, info_activo
+   - Hiperparámetros: ancho_de_ventana y temporalidad
+   - Output: forecast, decision_rule → pending order (sell/buy + price + volumen/pip, TP/SL)
+
+4. **Retroalimentación**
+   - Logs
+   - Métricas de error
+   - Informes (conexión, financiero, pipeline, errores)
+
+### 📚 ¿Cómo aprendemos?
+- Políticas
+- Lectura
