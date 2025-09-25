@@ -27,11 +27,6 @@ This project contains an algorithmic trading system template with modular design
    - Create/activate a virtual environment.  
    - Install all exact versions defined in `poetry.lock`.
 
-4. **(Optional) Enter the virtual environment**
-   ```bash
-   poetry shell
-   ```
-
 
 ## ▶️ Running the Project
 
